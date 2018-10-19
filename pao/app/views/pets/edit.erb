@@ -1,0 +1,12 @@
+<h1> Edit Form </h1>
+
+<%= form_for @pet do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :species %>
+  <%= f.text_field :species %>
+  <%= f.label :age %>
+  <%= f.text_field :age %>
+  <%= f.collection_check_boxes :owner_ids, Owner.all, :id, :name %>
+  <%= f.submit %>
+<% end %>
